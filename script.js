@@ -24,10 +24,28 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
+let timeRemaining = 75;
+let timerInterval;
 
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const scoreElement = document.getElementById('score');
+
+const timerElement = document.getElementById('timer');
+console.log(timerElement)
+
+function startTimer(){
+    timerInterval = setInterval(function (){
+        timeRemaining--;
+        timerElement.innerHTML = timeRemaining
+    },1000)
+}
+
+startTimer();
+
+function stopTimer (){
+    clearInterval(timerInterval)
+}
 
 function displayQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
@@ -58,6 +76,7 @@ function checkAnswer(selectedOption) {
 }
 
 function showResult() {
+    stopTimer();
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your Score: ${score} / ${questions.length}`;
