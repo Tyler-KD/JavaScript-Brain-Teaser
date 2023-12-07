@@ -22,6 +22,20 @@ const questions = [
     }
 ];
 
+const initialElement = document.getElementById('initialView')
+const questionStartElement = document.getElementById('questionView')
+
+function startQuiz (){
+    $("#hide").click(function(){
+        $("#initialView").hide();
+      });
+      
+      $("#show").click(function(){
+        $("questionView").show();
+      });
+      document.getElementById("#initialView").addEventListener("click", myFunction, true);
+    }
+
 let currentQuestionIndex = 0;
 let score = 0;
 let timeRemaining = 75;
