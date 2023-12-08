@@ -81,7 +81,8 @@ function checkAnswer(selectedOption) {
 
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
-    } else {
+    } 
+    else {
         showResult();
     }
 }
@@ -91,6 +92,14 @@ function showResult() {
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your Score: ${timeRemaining}`;
+}
+
+function gameOver(){
+    if (timeRemaining <= 0){
+        timeRemaining = 0;
+        stopTimer();
+        showResult();
+    }
 }
 
 initialElement.addEventListener("click", startQuiz);
