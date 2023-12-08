@@ -52,8 +52,6 @@ function startTimer(){
     },1000)
 }
 
-
-
 function stopTimer (){
     clearInterval(timerInterval)
 }
@@ -76,7 +74,9 @@ function checkAnswer(selectedOption) {
     if (selectedOption === currentQuestion.answer) {
         score++;
     }
-
+    else{
+        timeRemaining -= 15
+    }
     currentQuestionIndex++;
 
     if (currentQuestionIndex < questions.length) {
@@ -90,7 +90,7 @@ function showResult() {
     stopTimer();
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
-    scoreElement.textContent = `Your Score: ${score} / ${questions.length}`;
+    scoreElement.textContent = `Your Score: ${timeRemaining}`;
 }
 
 initialElement.addEventListener("click", startQuiz);
