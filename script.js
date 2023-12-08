@@ -49,7 +49,10 @@ function startTimer(){
     timerInterval = setInterval(function (){
         timeRemaining--;
         timerElement.innerHTML = timeRemaining
+        if(timeRemaining <= 0){
+            gameOver();}
     },1000)
+    
 }
 
 function stopTimer (){
@@ -76,6 +79,9 @@ function checkAnswer(selectedOption) {
     }
     else{
         timeRemaining -= 15
+        if(timeRemaining < 0){
+            timeRemaining = 0;
+        }
     }
     currentQuestionIndex++;
 
@@ -101,6 +107,8 @@ function gameOver(){
         showResult();
     }
 }
+
+gameOver();
 
 initialElement.addEventListener("click", startQuiz);
 
