@@ -23,17 +23,14 @@ const questions = [
 ];
 
 const initialElement = document.getElementById('initialView')
+const startPage = document.querySelector('.startingView')
 const questionStartElement = document.getElementById('questionView')
 
 function startQuiz (){
-    $("#hide").click(function(){
-        $("#initialView").hide();
-      });
-      
-      $("#show").click(function(){
-        $("questionView").show();
-      });
-      document.getElementById("#initialView").addEventListener("click", myFunction, true);
+startPage.setAttribute('class', "hide")
+// startPage.innerHTML = ""
+      questionStartElement.removeAttribute('class')
+      startTimer();
     }
 
 let currentQuestionIndex = 0;
@@ -55,7 +52,7 @@ function startTimer(){
     },1000)
 }
 
-startTimer();
+
 
 function stopTimer (){
     clearInterval(timerInterval)
@@ -95,5 +92,7 @@ function showResult() {
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your Score: ${score} / ${questions.length}`;
 }
+
+initialElement.addEventListener("click", startQuiz);
 
 displayQuestion();

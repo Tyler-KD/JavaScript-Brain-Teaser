@@ -24,7 +24,7 @@ body {
     padding-bottom: 30px;
 }
 
-#initialView {
+.startingView {
     background: #fff;
     width: 90%;
     max-width: 600px;
@@ -33,7 +33,7 @@ body {
     padding: 30px;
 }
 
-#initialView h1 {
+.startingView h1 {
     font-size: 46px;
     color: #001e4d;
     font-weight: 600;
