@@ -31,6 +31,8 @@ const questions = [
 const initialElement = document.getElementById('initialView')
 const startPage = document.querySelector('.startingView')
 const questionStartElement = document.getElementById('questionView')
+const CorrectChoice = document.getElementById('correct answer')
+const IncorrectChoice = document.getElementById('incorrect answer')
 
 function startQuiz (){
 startPage.setAttribute('class', "hide")
@@ -82,8 +84,10 @@ function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
     if (selectedOption === currentQuestion.answer) {
         score++;
+        CorrectChoice.removeAttribute('class')
     }
     else{
+        IncorrectChoice.removeAttribute('class');
         timeRemaining -= 15
         if(timeRemaining < 0){
             timeRemaining = 0;
