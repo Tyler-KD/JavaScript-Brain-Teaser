@@ -5,6 +5,12 @@ const questions = [
         answer: "'33'"
     },
     {
+        question: "Where is the correct place to insert JavaScript?",
+        options: ["In the external file", "The head section", "The body section", "All of the above"],
+        answer: "The body section"
+
+    },
+    {
         question: "What is the correct way to store data within an array?",
         options: ["var names = [Andre, Karl, Rashida, Olivia]", "var names = ('Andre', 'Karl', 'Rashida', 'Olivia')", 
         "var names = ['Andre', 'Karl', 'Rashida', 'Olivia']", "None of the above"],
@@ -108,7 +114,6 @@ function gameOver(){
     }
 }
 
-gameOver();
 
 initialElement.addEventListener("click", startQuiz);
 
