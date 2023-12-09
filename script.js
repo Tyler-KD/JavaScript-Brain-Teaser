@@ -84,10 +84,12 @@ function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
     if (selectedOption === currentQuestion.answer) {
         score++;
-        CorrectChoice.removeAttribute('class')
+        CorrectChoice.removeAttribute('class');
+        IncorrectChoice.setAttribute('class','choice incorrect hide')
     }
     else{
         IncorrectChoice.removeAttribute('class');
+        CorrectChoice.setAttribute('class','choice correct hide')
         timeRemaining -= 15
         if(timeRemaining < 0){
             timeRemaining = 0;
