@@ -15,14 +15,25 @@
             </section>
             <section id="timer"></section>
             <section class="hide" id="questionView">
-                <h1>JavaScript Brain Teaser</h1>
+                <h2>JavaScript Brain Teaser</h2>
                 <div class="question" id="question"></div>
                 <div class="options" id="options"></div>
-                <div id="score">Score: 0</div>
+                
             </section>
             <section>
                 <p id= "correct answer" class="choice correct hide">Correct!</p>
                 <p id= "incorrect answer" class="choice incorrect hide">Incorrect!</p>
+            </section>
+            <section id = "initialInputView" class = "hide">
+                <h2>Quiz Complete!</h2>
+                <div id="score">Score: 0</div>
+                Enter Initial: <input id = "initial-input" type="text">
+                <button id = "submit-button">submit</button>
+            </section>
+            <section id = "All-Scores" class="hide">
+                <ol id = "High-Scores-List">
+
+                </ol>
             </section>
         </main>
         <script src="./script.js"></script>

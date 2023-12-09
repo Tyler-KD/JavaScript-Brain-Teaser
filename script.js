@@ -28,16 +28,24 @@ const questions = [
     }
 ];
 
+const InitialsScores = [];
+
+
 const initialElement = document.getElementById('initialView')
 const startPage = document.querySelector('.startingView')
 const questionStartElement = document.getElementById('questionView')
 const CorrectChoice = document.getElementById('correct answer')
 const IncorrectChoice = document.getElementById('incorrect answer')
+const initialInputViewEl = document.getElementById('initialInputView')
+const initialInputEl = document.getElementById('initial-input')
+const submitButton = document.getElementById('submit-button')
+const AllScoresEl = document.getElementById('All-Scores')
+const HighScoresListEl = document.getElementById('High-Scores-List')
 
 function startQuiz (){
 startPage.setAttribute('class', "hide")
 // startPage.innerHTML = ""
-      questionStartElement.removeAttribute('class')
+      questionStartElement.classList.remove('hide')
       startTimer();
     }
 
@@ -106,12 +114,10 @@ function checkAnswer(selectedOption) {
 }
 
 function showResult() {
+    initialInputViewEl.classList.remove('hide')
+    questionStartElement.classList.add('hide')
     stopTimer();
-    questionElement.textContent = 'Quiz Completed!';
-    optionsElement.innerHTML = '';
-    scoreElement.textContent = `Your score: ${timeRemaining}`;
-    localStorage.setItem("scoreElement", score);
-    console.log(score)
+    
     renderLastRegistered();
 }
 
@@ -127,8 +133,27 @@ function renderLastRegistered(){
     var finalScore = localStorage.getItem('scoreElement');
     scoreElement.textContent = `Your score: ${finalScore}`;
 }
+function saveInitial(){
+    questionElement.textContent = 'Quiz Completed!';
+    optionsElement.innerHTML = '';
+    scoreElement.textContent = `Your score: ${timeRemaining}`;
+    var userInfo = {
+        initial: initialInputEl.value ,
+        score
+    }
+    InitialsScores.push (userInfo)
+    localStorage.setItem("scoreElement", JSON.stringify(InitialsScores));
+    console.log(score)
+    ScoresSection()
+}
 
+function ScoresSection (){
+    AllScoresEl.classList.remove('hide')
+    initialInputViewEl.classList.add('hide')
+    AllScoresEl.classList.appendChild('li')
+}
 
+submitButton.addEventListener("click", saveInitial)
 
 initialElement.addEventListener("click", startQuiz);
 
