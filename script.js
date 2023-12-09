@@ -109,9 +109,10 @@ function showResult() {
     stopTimer();
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
-    scoreElement.textContent = `Your Score: ${timeRemaining}`;
-    // localStorage.setItem("scoreElement", scoreElement);
-    // renderLastRegistered();
+    scoreElement.textContent = `Your score: ${timeRemaining}`;
+    localStorage.setItem("scoreElement", score);
+    console.log(score)
+    renderLastRegistered();
 }
 
 function gameOver(){
@@ -122,10 +123,10 @@ function gameOver(){
     }
 }
 
-// function renderLastRegistered(){
-//     var finalScore = localStorage.getItem('scoreElement');
-//     scoreElement.textContent = scoreElement;
-// }
+function renderLastRegistered(){
+    var finalScore = localStorage.getItem('scoreElement');
+    scoreElement.textContent = `Your score: ${finalScore}`;
+}
 
 
 
