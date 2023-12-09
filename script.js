@@ -110,6 +110,8 @@ function showResult() {
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your Score: ${timeRemaining}`;
+    // localStorage.setItem("scoreElement", scoreElement);
+    // renderLastRegistered();
 }
 
 function gameOver(){
@@ -119,6 +121,12 @@ function gameOver(){
         showResult();
     }
 }
+
+// function renderLastRegistered(){
+//     var finalScore = localStorage.getItem('scoreElement');
+//     scoreElement.textContent = scoreElement;
+// }
+
 
 
 initialElement.addEventListener("click", startQuiz);
