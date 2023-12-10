@@ -131,26 +131,36 @@ function gameOver(){
 
 function renderLastRegistered(){
     var finalScore = localStorage.getItem('scoreElement');
-    scoreElement.textContent = `Your score: ${finalScore}`;
+    scoreElement.textContent = `Your score: ${score}`;
 }
 function saveInitial(){
     questionElement.textContent = 'Quiz Completed!';
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your score: ${timeRemaining}`;
+    
+    var highScores = JSON.parse(window.localStorage.getItem("scoreElement")) || [];
+
     var userInfo = {
         initial: initialInputEl.value ,
-        score
-    }
-    InitialsScores.push (userInfo)
-    localStorage.setItem("scoreElement", JSON.stringify(InitialsScores));
-    console.log(score)
+        score,
+    };
+
+    highScores.push (userInfo)
+    localStorage.setItem("scoreElement", JSON.stringify(highScores));
     ScoresSection()
 }
 
 function ScoresSection (){
     AllScoresEl.classList.remove('hide')
-    initialInputViewEl.classList.add('hide')
-    AllScoresEl.classList.appendChild('li')
+    // initialInputViewEl.classList.add('hide')
+    // AllScoresEl.classList.appendChild('li')
+    var highScores = JSON.parse(window.localStorage.getItem("scoreElement")) || [];
+    
+    for (let i = 0; i < highScores.length; i++){
+        var liEl = document.createElement("li");
+        liEl.textContent = highScores[i].initial;
+        HighScoresListEl.appendChild(liEl);
+    }
 }
 
 submitButton.addEventListener("click", saveInitial)
