@@ -131,7 +131,7 @@ function gameOver(){
 
 function renderLastRegistered(){
     var finalScore = localStorage.getItem('scoreElement');
-    scoreElement.textContent = `Your score: ${score}`;
+    scoreElement.textContent = `Your score: ${timeRemaining}`;
 }
 function saveInitial(){
     questionElement.textContent = 'Quiz Completed!';
@@ -142,7 +142,7 @@ function saveInitial(){
 
     var userInfo = {
         initial: initialInputEl.value ,
-        score,
+        score: timeRemaining,
     };
 
     highScores.push (userInfo)
@@ -158,7 +158,7 @@ function ScoresSection (){
     
     for (let i = 0; i < highScores.length; i++){
         var liEl = document.createElement("li");
-        liEl.textContent = highScores[i].initial;
+        liEl.textContent = `${highScores[i].initial}, ${highScores[i].score}`;
         HighScoresListEl.appendChild(liEl);
     }
 }
