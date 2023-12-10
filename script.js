@@ -135,6 +135,9 @@ function renderLastRegistered(){
 }
 function saveInitial(){
     questionElement.textContent = 'Quiz Completed!';
+    if (submitButton.disabled){
+        return;
+    }
     optionsElement.innerHTML = '';
     scoreElement.textContent = `Your score: ${timeRemaining}`;
     
@@ -148,6 +151,8 @@ function saveInitial(){
     highScores.push (userInfo)
     localStorage.setItem("scoreElement", JSON.stringify(highScores));
     ScoresSection()
+
+    submitButton.disabled = true;
 }
 
 function ScoresSection (){
