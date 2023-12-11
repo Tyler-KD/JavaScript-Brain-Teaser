@@ -10,7 +10,7 @@ When the page is loaded, the user is presented with a start page titled with the
 
 Attached is a screenshot of the webpage:
 
-![JavaScript-Brain-Teaser Screenshot](</assets/images/JavaScript-Brain-Teaser-screenshot.png>)
+![JavaScript-Brain-Teaser Screenshot](</assets/images/JS-Brain-Teaser-Screenshot.png>)
 
 
 ## Deployed Site
