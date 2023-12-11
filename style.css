@@ -1,14 +1,14 @@
 :root {
-    --light-green-color: #b0ffa6;
-    --green-bg-gradient: linear-gradient(#374f23, #4d4216);
-    --light-green-shadow: 0 0 60px rgb(143, 249, 148);
+    --light-blue-color: #66c9d6;
+    --purple-bg-gradient: linear-gradient(#1c1f0f, #6c59a0);
+    --light-blue-shadow: 0 0 60px rgb(129, 198, 255);
 }
 
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: var(--light-green-color);
+    color: var(--light-blue-color);
 }
 
 body {
@@ -36,26 +36,26 @@ main {
     width: 50%;
     height: auto;
     margin: 100px 0 50px 0;
-    background: var(--green-bg-gradient);
-    border-radius: 20px;
-    opacity: 90%;
-    box-shadow: var(--light-green-shadow);
+    padding: 4em;
+    background: var(--purple-bg-gradient);
+    border-radius: 30px;
+    box-shadow: var(--light-blue-shadow);
 }
 
 .startingView h1 {
     font-size: 46px;
-    color: var(--light-green-color);
+    color: var(--light-blue-color);
     font-weight: 600;
     padding-bottom: 30px;
 }
 
 .startingView p {
-    color: var(--light-green-color);
+    color: var(--light-blue-color);
 }
 
 #initialView {
-    background-color: darkcyan;
-    border-block-color: var(--light-green-color);
+    background-color: #392942;
+    border-block-color: var(--light-blue-color);
     cursor: pointer;
 }
 
@@ -65,13 +65,12 @@ main {
 
 #questionView,
 #initialInputView {
-    background: var(--green-bg-gradient);
-    box-shadow: var(--light-green-shadow);
-    width: 90%;
+    background: var(--purple-bg-gradient);
+    box-shadow: var(--light-blue-shadow);
     max-width: 600px;
     margin: 100px auto 0;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 30px;
+    padding: 4em;
 }
 
 #questionView h1 {
@@ -82,7 +81,7 @@ main {
 
 .question {
     padding: 20px 0;
-    color: var(--light-green-color);
+    color: var(--light-blue-color);
     font-weight: 600;
 }
 
@@ -97,22 +96,22 @@ main {
 }
 
 .options>button {
-    background: var(--green-bg-gradient);
+    background: var(--purple-bg-gradient);
     cursor: pointer;
-    border-block-color: var(--light-green-color);
+    border-block-color: var(--light-blue-color);
 }
 
 #initialInputView {
-    background: var(--green-bg-gradient);
+    background: var(--purple-bg-gradient);
 }
 
 #initial-input {
-    background: darkcyan;
+    background: #392942;
 }
 
 #submit-button {
-    background: var(--green-bg-gradient);
-    border-block-color: var(--light-green-color);
+    background: var(--purple-bg-gradient);
+    border-block-color: var(--light-blue-color);
     cursor: pointer;
 }
 
@@ -156,5 +155,6 @@ main {
 
     #initialInputView {
         max-width: 300px;
+        padding: 2em;
     }
 }
