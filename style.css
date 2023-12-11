@@ -2,13 +2,27 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
+    color: #b0ffa6;
 }
+
 body {
-    background: #001e4d;
+    background: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #questionView, #initialInputView {
-    background: #fff;
+    background: linear-gradient(#374f23, #4d4216);
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -25,20 +39,35 @@ body {
 }
 
 .startingView {
-    background: #fff;
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
-    border-radius: 10px;
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    margin: 100px 0 50px 0;
+    background: linear-gradient(#374f23, #4d4216);
+    border-radius: 20px;
+    opacity: 90%;
+    box-shadow: 0 0 60px rgb(143, 249, 148);
 }
 
 .startingView h1 {
     font-size: 46px;
-    color: #001e4d;
+    color: #b0ffa6;
     font-weight: 600;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;   
+}
+
+.startingView p {
+    color: #b0ffa6;
+}
+
+#initialView {
+    background-color: darkcyan;
+    cursor: pointer;
 }
 
 .hide {
@@ -47,11 +76,10 @@ body {
 
 .question {
     padding: 20px 0;
-    color: #001e4d;
+    color: #b0ffa6;
     font-weight: 600;
 }
 .options {
-    background: #fff;
     color: #222;
     font-weight: 500;
     width: 100%;
@@ -61,4 +89,55 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+#initialInputView {
+    background: linear-gradient(#374f23, #4d4216);
+}
+
+#initial-input {
+    background: darkcyan;
+}
+
+#submit-button {
+    background: linear-gradient(#374f23, #4d4216);
+}
+
+@media screen and (max-width: 992px){
+    .startingView{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    .startingView h1{
+        font-size: 1.5em;
+    }
+    #initialInputView{
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .startingView{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .startingView{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    .startingView h1{
+        font-size: 1.2em;
+    }
+    #initialInputView{
+        max-width: 300px;
+    }
 }

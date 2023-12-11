@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="./style.css" />
     </head>
     <body>
-        <main>
+        <main id="main">
             <section class="startingView" >
                 <h1>JavaScript Brain Teaser</h1>
                 <p>"Challenge yourself to a JavaScript quiz.  You have 75 seconds and will be penalized 10 seconds for every incorrect answer.  Good luck!"</p>
@@ -15,12 +15,12 @@
             </section>
             <section id="timer"></section>
             <section class="hide" id="questionView">
-                <h2>JavaScript Brain Teaser</h2>
+                <!-- <h2>JavaScript Brain Teaser</h2> -->
                 <div class="question" id="question"></div>
                 <div class="options" id="options"></div>
                 
             </section>
-            <section>
+            <section id="choice-answers">
                 <p id= "correct answer" class="choice correct hide">Correct!</p>
                 <p id= "incorrect answer" class="choice incorrect hide">Incorrect!</p>
             </section>

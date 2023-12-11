@@ -41,6 +41,11 @@ const initialInputEl = document.getElementById('initial-input')
 const submitButton = document.getElementById('submit-button')
 const AllScoresEl = document.getElementById('All-Scores')
 const HighScoresListEl = document.getElementById('High-Scores-List')
+const choiceAnswersEl = document.getElementById('choice-answers')
+
+initialElement.setAttribute("style", "display: flex; justify-content: center; margin: 1em");
+choiceAnswersEl.setAttribute("style", "display: flex; justify-content: center;")
+
 
 function startQuiz (){
 startPage.setAttribute('class', "hide")
@@ -60,6 +65,8 @@ const scoreElement = document.getElementById('score');
 
 const timerElement = document.getElementById('timer');
 console.log(timerElement)
+
+timerElement.setAttribute("style", "position: relative; display: flex; flex-direction: row; justify-content: center");
 
 function startTimer(){
     timerInterval = setInterval(function (){
