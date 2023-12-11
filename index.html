@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript Brain Teaser</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="./style.css" />
-    </head>
-    <body>
-        <main id="main">
-            <section class="startingView" >
-                <h1>JavaScript Brain Teaser</h1>
-                <p>"Challenge yourself to a JavaScript quiz.  You have 75 seconds and will be penalized 15 seconds for every incorrect answer.  Good luck!"</p>
-                <button id="initialView">Start Button</button>
-            </section>
-            <section id="timer"></section>
-            <section class="hide" id="questionView">
-                <!-- <h2>JavaScript Brain Teaser</h2> -->
-                <div class="question" id="question"></div>
-                <div class="options" id="options"></div>
-                
-            </section>
-            <section id="choice-answers">
-                <p id= "correct answer" class="choice correct hide">Correct!</p>
-                <p id= "incorrect answer" class="choice incorrect hide">Incorrect!</p>
-            </section>
-            <section id = "initialInputView" class = "hide">
-                <h2>Quiz Complete!</h2>
-                <div id="score">Score: 0</div>
-                Enter Initials: <input id = "initial-input" type="text">
-                <button id = "submit-button">submit</button>
-            </section>
-            <section id = "All-Scores" class="hide">
-                <ol id = "High-Scores-List"></ol>
-            </section>
-        </main>
-        <script src="./script.js"></script>
-    </body>
+
+<head>
+    <!-- Title in URL Browser -->
+    <title>JavaScript Brain Teaser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+    <main>
+        <section class="startingView">
+            <!-- Header of page -->
+            <h1>JavaScript Brain Teaser</h1>
+            <!-- Paragraph element describing the quiz -->
+            <p>"Challenge yourself to a JavaScript quiz. You have 75 seconds and will be penalized 15 seconds for every
+                incorrect answer. Good luck!"</p>
+            <!-- Start button for quiz -->
+            <button id="initialView">Start</button>
+        </section>
+
+        <!-- Timer starts after clicking "Start" -->
+        <section id="timer"></section>
+
+        <!-- Section containing questions and options / choices -->
+        <section class="hide" id="questionView">
+            <!-- <h2>JavaScript Brain Teaser</h2> -->
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+        </section>
+
+        <!-- Section displaying "Correct!" or "Incorrect!" answers to user -->
+        <section id="choice-answers">
+            <p id="correct answer" class="choice correct hide">Correct!</p>
+            <p id="incorrect answer" class="choice incorrect hide">Incorrect!</p>
+        </section>
+
+        <!-- Section for after quiz results and initials submission box -->
+        <section id="initialInputView" class="hide">
+            <h2>Quiz Complete!</h2>
+            <div id="score">Score: 0</div>
+            Enter Initials: <input id="initial-input" type="text">
+            <button id="submit-button">submit</button>
+        </section>
+
+        <!-- Section displaying All-Scores saved in local storage -->
+        <section id="All-Scores" class="hide">
+            <ol id="High-Scores-List"></ol>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
 </html>

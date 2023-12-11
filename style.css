@@ -1,8 +1,14 @@
+:root {
+    --light-green-color: #b0ffa6;
+    --green-bg-gradient: linear-gradient(#374f23, #4d4216);
+    --light-green-shadow: 0 0 60px rgb(143, 249, 148);
+}
+
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: #b0ffa6;
+    color: var(--light-green-color);
 }
 
 body {
@@ -21,23 +27,6 @@ main {
     align-items: center;
 }
 
-#questionView, #initialInputView {
-    background: linear-gradient(#374f23, #4d4216);
-    width: 90%;
-    max-width: 600px;
-    margin: 100px auto 0;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-#questionView h1 {
-    font-size: 46px;
-    color: #001e4d;
-    font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
-}
-
 .startingView {
     display: flex;
     flex-wrap: wrap;
@@ -47,26 +36,26 @@ main {
     width: 50%;
     height: auto;
     margin: 100px 0 50px 0;
-    background: linear-gradient(#374f23, #4d4216);
+    background: var(--green-bg-gradient);
     border-radius: 20px;
     opacity: 90%;
-    box-shadow: 0 0 60px rgb(143, 249, 148);
+    box-shadow: var(--light-green-shadow);
 }
 
 .startingView h1 {
     font-size: 46px;
-    color: #b0ffa6;
+    color: var(--light-green-color);
     font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;   
+    padding-bottom: 30px;
 }
 
 .startingView p {
-    color: #b0ffa6;
+    color: var(--light-green-color);
 }
 
 #initialView {
     background-color: darkcyan;
+    border-block-color: var(--light-green-color);
     cursor: pointer;
 }
 
@@ -74,30 +63,47 @@ main {
     display: none;
 }
 
+#questionView,
+#initialInputView {
+    background: var(--green-bg-gradient);
+    box-shadow: var(--light-green-shadow);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#questionView h1 {
+    font-size: 46px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
 .question {
     padding: 20px 0;
-    color: #b0ffa6;
+    color: var(--light-green-color);
     font-weight: 600;
 }
+
 .options {
-    color: #222;
     font-weight: 500;
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     text-align: left;
     border-radius: 4px;
-    /* cursor: pointer; */
     transition: all 0.3s;
 }
 
-.options > button {
-    background: linear-gradient(#374f23, #4d4216);
+.options>button {
+    background: var(--green-bg-gradient);
     cursor: pointer;
+    border-block-color: var(--light-green-color);
 }
 
 #initialInputView {
-    background: linear-gradient(#374f23, #4d4216);
+    background: var(--green-bg-gradient);
 }
 
 #initial-input {
@@ -105,27 +111,30 @@ main {
 }
 
 #submit-button {
-    background: linear-gradient(#374f23, #4d4216);
+    background: var(--green-bg-gradient);
+    border-block-color: var(--light-green-color);
     cursor: pointer;
 }
 
-@media screen and (max-width: 992px){
-    .startingView{
+@media screen and (max-width: 992px) {
+    .startingView {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: auto;
     }
-    .startingView h1{
+
+    .startingView h1 {
         font-size: 1.5em;
     }
-    #initialInputView{
+
+    #initialInputView {
         max-width: 500px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .startingView{
+@media screen and (max-width: 768px) {
+    .startingView {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -134,16 +143,18 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-    .startingView{
+    .startingView {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin: auto;
     }
-    .startingView h1{
+
+    .startingView h1 {
         font-size: 1.2em;
     }
-    #initialInputView{
+
+    #initialInputView {
         max-width: 300px;
     }
 }
