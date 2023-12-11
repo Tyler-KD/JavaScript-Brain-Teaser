@@ -87,8 +87,13 @@ main {
     margin: 10px 0;
     text-align: left;
     border-radius: 4px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.3s;
+}
+
+.options > button {
+    background: linear-gradient(#374f23, #4d4216);
+    cursor: pointer;
 }
 
 #initialInputView {
@@ -101,6 +106,7 @@ main {
 
 #submit-button {
     background: linear-gradient(#374f23, #4d4216);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 992px){
