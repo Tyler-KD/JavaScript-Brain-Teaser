@@ -24,7 +24,7 @@ const questions = [
         answer: "pop()"
     },
     {
-        question: "How do you write an 'if' statement if 'i' is no greater than 30?",
+        question: "How do you write an 'if' statement if 'i' is at most 30?",
         options: ["i <= 30", "i < 30", "i <> 30", "i => 30"],
         answer: "i <= 30"
     }
