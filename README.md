@@ -15,6 +15,8 @@ Attached is a screenshot of the webpage:
 
 ## Deployed Site
 
+[Deployed Site](https://tyler-kd.github.io/JavaScript-Brain-Teaser/)
+
 ## Credits
 
 [Hide & Show](https://www.w3schools.com/w3js/w3js_hide.asp)
