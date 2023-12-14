@@ -160,6 +160,7 @@ main {
 
     #questionView,
     #initialInputView {
-        padding: 1em;
+        padding: 0.5em;
+        font-size: 1em;
     }
 }
